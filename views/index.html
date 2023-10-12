@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>헬스플랫폼서비스</title>
+
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body
+    style="background-color: black; font-family: 'Black Han Sans', sans-serif"
+  >
+    <div
+      style="
+        opacity: 0.3;
+        background-image: url('/assets/img/back2.PNG');
+        background-repeat: no-repeat;
+
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+      "
+    ></div>
+    <div
+      class="container-flux"
+      style="
+        overflow: hidden;
+        z-index: 2;
+        color: white;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        flex-direction: column;
+      "
+    >
+      <h1
+        style="
+          padding-top: 40%;
+          margin-left: -10%;
+          width: 200%;
+          font-size: 120px;
+          opacity: 0;
+          transform: rotate(10deg);
+        "
+        id="title"
+      >
+        트레이<br />너를<br />
+        위한 <br />가장 편한<br />플랫폼
+      </h1>
+    </div>
+
+    <script src="/assets/jquery/jquery.min.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      function titleAni() {
+        $("#title").animate(
+          {
+            opacity: "0.6",
+            paddingTop: "10%",
+            marginLeft: "10%",
+          },
+          3000,
+          "swing",
+          () => {
+            setTimeout(() => {
+              $("#title").css("opacity", 0);
+              $("#title").css("margin-left", "-10%");
+              $("#title").css("padding-top", "40%");
+              titleAni();
+            }, 3000);
+          }
+        );
+      }
+      titleAni();
+    </script>
+  </body>
+</html>
