@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <title>health</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/styles/bootstrap.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/assets/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/assets/fonts/css/fontawesome-all.min.css"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/app/icons/icon-192x192.png"
+    />
+  </head>
+
+  <body class="theme-dark" data-highlight="highlight-red">
+    <!-- Button trigger modal -->
+    <button
+      style="display: none"
+      id="videoModalBtn"
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#videoModal"
+    >
+      videomodal
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content" style="background-color: #1b1d21 !important">
+          <div class="modal-header" style="border: 0">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              2023-10-16 수업
+            </h1>
+          </div>
+          <div class="modal-body">
+            <p
+              style="
+                color: white;
+                position: absolute;
+                top: 30px;
+                z-index: 3;
+                left: 30px;
+                border-radius: 10px;
+                padding: 4px;
+                background-color: black;
+                opacity: 0.7;
+              "
+            >
+              2023-10-16 수업
+            </p>
+            <video
+              width="100%"
+              controls
+              style="border-radius: 20px; position: relative"
+            >
+              <source src="/assets/img/test.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="mt-3 mb-3">댓글16개</div>
+            <div class="row" style="max-height: 50px; color: white">
+              <div class="col" style="max-width: 50px">
+                <div
+                  style="
+                    width: 30px;
+                    height: 30px;
+                    background-color: aliceblue;
+                    border-radius: 30px;
+                  "
+                >
+                  <img src="/assets/images/avatars/5xs.png" width="30" />
+                </div>
+              </div>
+              <div class="col">
+                <div>재훈님 <small>10분전</small></div>
+                <div>훌륭합니다. 👍</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer" style="border: 0">
+            <button
+              type="button"
+              class="btn btn-sm rounded-s font-13 font-600 gradient-highlight"
+              data-bs-dismiss="modal"
+            >
+              닫기🎅
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page">
+      <div class="header header-auto-show header-fixed header-logo-center">
+        <a href="index.html" class="header-title">LegendOfTrainer</a>
+        <a href="#" data-menu="menu-main" class="header-icon header-icon-1"
+          ><i class="fas fa-bars"></i
+        ></a>
+      </div>
+
+      <div id="footer-bar" class="footer-bar-6">
+        <a href="#"><i class="fa fa-layer-group"></i><span>수업</span></a>
+        <a href="#"><i class="fa fa-file"></i><span>예약</span></a>
+        <a href="/main" class="circle-nav active-nav"
+          ><i class="fa fa-home"></i><span>홈</span></a
+        >
+        <a href="#"><i class="fa fa-image"></i><span>내 공간</span></a>
+        <a href="#" data-menu="menu-main"
+          ><i class="fa fa-bars"></i><span>설정</span></a
+        >
+      </div>
+
+      <div class="page-title page-title-fixed">
+        <h1>LegendOfTrainer</h1>
+      </div>
+      <div class="page-title-clear"></div>
+
+      <div
+        id="menu-main"
+        class="menu menu-box-left rounded-0"
+        data-menu-width="280"
+        data-menu-active="nav-welcome"
+        data-menu-load="menu-main.html"
+      ></div>
+      <div
+        id="menu-share"
+        class="menu menu-box-bottom rounded-m"
+        data-menu-load="menu-share.html"
+        data-menu-height="370"
+      ></div>
+      <div
+        id="menu-colors"
+        class="menu menu-box-bottom rounded-m"
+        data-menu-load="menu-colors.html"
+        data-menu-height="480"
+      ></div>
+
+      <div class="page-content">
+        <div
+          class="splide double-slider visible-slider slider-no-dots"
+          id="double-slider-1"
+        >
+          <div class="splide__track">
+            <div class="splide__list" onclick="openVideoModal()">
+              <div class="splide__slide ps-3">
+                <div
+                  data-card-height="220"
+                  class="card shadow-xl rounded-m bg-6"
+                >
+                  <img src="/assets/img/s1.PNG" />
+                  <div class="card-bottom text-center" />
+                  <h4 class="color-white font-800 mb-3">덤벨</h4>
+                </div>
+                <div class="card-overlay bg-gradient"></div>
+              </div>
+            </div>
+            <div class="splide__slide ps-3" onclick="openVideoModal()">
+              <div
+                data-card-height="220"
+                class="card shadow-xl rounded-m bg-16"
+              >
+                <img src="/assets/img/s2.PNG" />
+                <div class="card-bottom text-center">
+                  <h4 class="color-white font-800 mb-3">벤치프레스</h4>
+                </div>
+                <div class="card-overlay bg-gradient"></div>
+              </div>
+            </div>
+            <div class="splide__slide ps-3" onclick="openVideoModal()">
+              <div
+                data-card-height="220"
+                class="card shadow-xl rounded-m bg-19"
+              >
+                <img src="/assets/img/s3.PNG" />
+                <div class="card-bottom text-center">
+                  <h4 class="color-white font-800 mb-3">스쿼트</h4>
+                </div>
+                <div class="card-overlay bg-gradient"></div>
+              </div>
+            </div>
+            <div class="splide__slide ps-3" onclick="openVideoModal()">
+              <div
+                data-card-height="220"
+                class="card shadow-xl rounded-m bg-31"
+              >
+                <img src="/assets/img/s4.PNG" />
+                <div class="card-bottom text-center">
+                  <h4 class="color-white font-800 mb-3">풀업</h4>
+                </div>
+                <div class="card-overlay bg-gradient"></div>
+              </div>
+            </div>
+            <div class="splide__slide ps-3" onclick="openVideoModal()">
+              <div
+                data-card-height="220"
+                class="card shadow-xl rounded-m bg-33"
+              >
+                <img src="/assets/img/s5.PNG" />
+                <div class="card-bottom text-center">
+                  <h4 class="color-white font-800 mb-3">런지</h4>
+                </div>
+                <div class="card-overlay bg-gradient"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card card-style shadow-xl">
+        <div class="content">
+          <p class="color-highlight font-600 mb-n1">가나다라</p>
+          <h1 class="font-24 font-700 mb-2">
+            최고의 트레이너
+            <i
+              class="fa fa-star mt-n2 font-30 color-yellow-dark float-end me-2 scale-box"
+            ></i>
+          </h1>
+          <p class="mb-1">
+            마바사아자차<br />월별 매출현황, 회원권 현황, 수업 진행도
+          </p>
+        </div>
+      </div>
+
+      <div class="card card-full-left card-style">
+        <div class="content">
+          <div class="d-flex">
+            <div class="me-3">
+              <img
+                width="120"
+                class="fluid-img rounded-m shadow-xl"
+                src="/assets/img/s1.PNG"
+              />
+            </div>
+            <div>
+              <p class="color-highlight font-600 mb-n1">식단 기록/알림/공유</p>
+              <h2>식단</h2>
+              <p class="mt-2">가나다라마바사</p>
+              <a
+                href="#"
+                class="btn btn-sm rounded-s font-13 font-600 gradient-highlight"
+                >고고자세히</a
+              >
+            </div>
+          </div>
+
+          <div class="divider mt-4"></div>
+
+          <div class="d-flex">
+            <div class="me-3">
+              <img
+                width="120"
+                class="fluid-img rounded-m shadow-xl"
+                src="/assets/img/s3.PNG"
+              />
+            </div>
+            <div>
+              <p class="color-highlight font-600 mb-n1">
+                채팅상담/운동백과 AI챗봇
+              </p>
+              <h2>상담 및 챗봇</h2>
+              <p class="mt-2">아자차카타파하</p>
+              <a
+                href="#"
+                class="btn btn-sm rounded-s font-13 font-600 gradient-highlight"
+                >고고자세히</a
+              >
+            </div>
+          </div>
+          <div class="divider mt-4"></div>
+
+          <div class="d-flex">
+            <div class="me-3">
+              <img
+                width="120"
+                class="fluid-img rounded-m shadow-xl"
+                src="/assets/img/s5.PNG"
+              />
+            </div>
+            <div>
+              <p class="color-highlight font-600 mb-n1">
+                수업 시범영상/내영상/사진/피드백
+              </p>
+              <h2>수업</h2>
+              <p class="mt-2">가다마사</p>
+              <a
+                href="#"
+                class="btn btn-sm rounded-s font-13 font-600 gradient-highlight"
+                >고고자세히</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-0">
+        <a href="#" class="col-6 pe-0">
+          <div class="card mr-0 card-style">
+            <div class="d-flex pt-3 pb-3">
+              <div class="align-self-center">
+                <i class="fa fa-home color-green-light ms-3 font-34 mt-1"></i>
+              </div>
+              <div class="align-self-center">
+                <h5 class="ps-2 ms-1 mb-0">
+                  어떤정보를 <br />
+                  표시하는게
+                </h5>
+              </div>
+            </div>
+            <p class="px-3">유용할지</p>
+          </div>
+        </a>
+        <a href="#" class="col-6 ps-0">
+          <div class="card ml-0 card-style">
+            <div class="d-flex pt-3 pb-3">
+              <div class="align-self-center">
+                <i class="fa fa-cog color-blue-dark ms-3 font-34 mt-1"></i>
+              </div>
+              <div class="align-self-center">
+                <h5 class="ps-2 ms-1 mb-0">고민은<br />깊어만가고</h5>
+              </div>
+            </div>
+            <p class="px-3">잠을자고싶다</p>
+          </div>
+        </a>
+      </div>
+
+      <a href="#">
+        <div class="card card-style">
+          <div class="d-flex pt-3 mt-1 mb-2 pb-2">
+            <div class="align-self-center">
+              <i
+                class="color-icon-gray color-gray-dark font-30 icon-40 text-center fa fa-moon ms-3 show-on-theme-light"
+              ></i>
+              <i
+                class="color-icon-yellow color-yellow-dark font-30 icon-40 text-center fa fa-sun ms-3 show-on-theme-dark"
+              ></i>
+            </div>
+            <div class="align-self-center">
+              <p class="ps-2 ms-1 color-highlight font-500 mb-n1 mt-n2">
+                트레이너와 효과적인 피드백 시스템
+              </p>
+              <h4 class="show-on-theme-light ps-2 ms-1 mb-0">헛둘 헛둘</h4>
+              <h4 class="show-on-theme-dark ps-2 ms-1 mb-0">헛둘 헛둘</h4>
+            </div>
+            <div class="ms-auto align-self-center mt-n2">
+              <div class="custom-control small-switch ios-switch me-3 mt-n2">
+                <input
+                  data-toggle-theme
+                  type="checkbox"
+                  class="ios-input"
+                  id="toggle-dark-home"
+                />
+                <label
+                  class="custom-control-label"
+                  for="toggle-dark-home"
+                ></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- End of Page Content-->
+    <!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
+
+    <!-- Menu Share -->
+    <div id="menu-share" class="menu menu-box-bottom menu-box-detached">
+      <div class="menu-title mt-n1">
+        <h1>Share the Love</h1>
+        <p class="color-highlight">
+          Just Tap the Social Icon. We'll add the Link
+        </p>
+        <a href="#" class="close-menu"><i class="fa fa-times"></i></a>
+      </div>
+      <div class="content mb-0">
+        <div class="divider mb-0"></div>
+        <div class="list-group list-custom-small list-icon-0">
+          <a href="#" class="shareToFacebook external-link">
+            <i class="font-18 fab fa-facebook-square color-facebook"></i>
+            <span class="font-13">Facebook</span>
+            <i class="fa fa-angle-right"></i>
+          </a>
+          <a href="#" class="shareToTwitter external-link">
+            <i class="font-18 fab fa-twitter-square color-twitter"></i>
+            <span class="font-13">Twitter</span>
+            <i class="fa fa-angle-right"></i>
+          </a>
+          <a href="#" class="shareToLinkedIn external-link">
+            <i class="font-18 fab fa-linkedin color-linkedin"></i>
+            <span class="font-13">LinkedIn</span>
+            <i class="fa fa-angle-right"></i>
+          </a>
+          <a href="#" class="shareToWhatsApp external-link">
+            <i class="font-18 fab fa-whatsapp-square color-whatsapp"></i>
+            <span class="font-13">WhatsApp</span>
+            <i class="fa fa-angle-right"></i>
+          </a>
+          <a href="#" class="shareToMail external-link border-0">
+            <i class="font-18 fa fa-envelope-square color-mail"></i>
+            <span class="font-13">Email</span>
+            <i class="fa fa-angle-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="/assets/scripts/bootstrap.min.js"
+    ></script>
+    <script src="/assets/jquery/jquery.min.js"></script>
+    <script>
+      function openVideoModal() {
+        $("#videoModalBtn").click();
+      }
+    </script>
+
+    <script type="text/javascript" src="/assets/scripts/custom.js"></script>
+  </body>
+</html>

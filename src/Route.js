@@ -8,6 +8,10 @@
         res.render("index.html", {});
       });
 
+      app.get("/main", function (req, res) {
+        res.render("main.html", {});
+      });
+
       //1. enetry point
       app.listen(1003, function () {
         console.log("health Server listen on *:1003");
